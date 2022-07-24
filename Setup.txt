@@ -1,0 +1,35 @@
+==============
+1. Python
+==============
+
+--------------
+Step 1.1:
+--------------
+
+The code to generate multiple conceptual models is in Python. Python can be downloaded using the below link:
+
+https://www.python.org/downloads/
+
+--------------
+Step 1.2:
+--------------
+
+The following python packages should be installed before running the Conceptual-Model-Tool v3.0:
+
+a. tkinter
+b. nltk
+c. sys
+d. turtle
+e. math
+f. random
+g. autocorrect
+h. ttkSimpleDialog
+
+==============
+2. EPS Viewer
+==============
+
+EPS Viewer is used to view Encapsulated PostScript (.eps) files. This software is free and can be downloaded using the below link:
+
+https://epsviewer.org/download.aspx
+
