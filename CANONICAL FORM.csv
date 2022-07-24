@@ -1,0 +1,12 @@
+agent,action,object,agent/object,precondition,agent/object,postcondition,gateway-in,gateway-out
+librarian,register,member,citizen,eligible,member,active,,[o]
+member,borrow,book,book,available,book,borrowed,,[o]
+member,borrow,book,member,active,book,borrowed,,[o]
+member,return,book,book,borrowed,book,available,,
+member,reserve,book,member,active,book,reserved,[+],
+member,reserve,book,book,borrowed,book,reserved,[+],
+member,drop,book,book,reserved,book,ready,,
+member,pick,book,member,active,book,borrowed,[+],[o]
+member,pick,book,book,ready,book,borrowed,[+],[o]
+librarian,suspend,member,member,active,member,suspended,,
+librarian,reactivate,member,member,suspended,member,active,,[o]

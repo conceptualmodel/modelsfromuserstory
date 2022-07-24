@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<process xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com domain.xsd">
+  <swimlane name="librarian"/>
+  <swimlane name="member"/>
+  <activity name="register member">
+    <swimlane>librarian</swimlane>
+    <isinitial>1</isinitial>
+    <isfinal>0</isfinal>
+    <precondition></precondition>
+    <postcondition>[o]</postcondition>
+  </activity>
+  <activity name="borrow book">
+    <swimlane>member</swimlane>
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+    <precondition></precondition>
+    <postcondition>[o]</postcondition>
+  </activity>
+  <activity name="return book">
+    <swimlane>member</swimlane>
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+    <precondition></precondition>
+    <postcondition>[o]</postcondition>
+  </activity>
+  <activity name="reserve book">
+    <swimlane>member</swimlane>
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+    <precondition></precondition>
+    <postcondition></postcondition>
+  </activity>
+  <activity name="drop book">
+    <swimlane>member</swimlane>
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+    <precondition>[+]</precondition>
+    <postcondition></postcondition>
+  </activity>
+  <activity name="pick book">
+    <swimlane>member</swimlane>
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+    <precondition>[+]</precondition>
+    <postcondition></postcondition>
+  </activity>
+  <activity name="suspend member">
+    <swimlane>librarian</swimlane>
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+    <precondition></precondition>
+    <postcondition></postcondition>
+  </activity>
+  <activity name="reactivate member">
+    <swimlane>librarian</swimlane>
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+    <precondition>[+]</precondition>
+    <postcondition>[o]</postcondition>
+  </activity>
+  <dependency>
+    <fromactivity>register member</fromactivity>
+    <toactivity>borrow book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>register member</fromactivity>
+    <toactivity>reserve book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>register member</fromactivity>
+    <toactivity>pick book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>register member</fromactivity>
+    <toactivity>suspend member</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>borrow book</fromactivity>
+    <toactivity>return book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>borrow book</fromactivity>
+    <toactivity>reserve book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>borrow book</fromactivity>
+    <toactivity>return book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>borrow book</fromactivity>
+    <toactivity>reserve book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>return book</fromactivity>
+    <toactivity>borrow book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>reserve book</fromactivity>
+    <toactivity>drop book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>reserve book</fromactivity>
+    <toactivity>drop book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>drop book</fromactivity>
+    <toactivity>pick book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>pick book</fromactivity>
+    <toactivity>return book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>pick book</fromactivity>
+    <toactivity>reserve book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>pick book</fromactivity>
+    <toactivity>return book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>pick book</fromactivity>
+    <toactivity>reserve book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>suspend member</fromactivity>
+    <toactivity>reactivate member</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>reactivate member</fromactivity>
+    <toactivity>borrow book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>reactivate member</fromactivity>
+    <toactivity>reserve book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>reactivate member</fromactivity>
+    <toactivity>pick book</toactivity>
+  </dependency>
+  <dependency>
+    <fromactivity>reactivate member</fromactivity>
+    <toactivity>suspend member</toactivity>
+  </dependency>
+</process>

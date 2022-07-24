@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<statemachine xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" objectname="member" xsi:schemaLocation="https://www.w3schools.com domain.xsd">
+  <state name="unknown">
+    <isinitial>1</isinitial>
+    <isfinal>0</isfinal>
+  </state>
+  <state name="active">
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+  </state>
+  <state name="suspended">
+    <isinitial>0</isinitial>
+    <isfinal>0</isfinal>
+  </state>
+  <transition name="suspend">
+    <by>librarian</by>
+    <fromstate>active</fromstate>
+    <tostate>suspended</tostate>
+  </transition>
+  <transition name="reactivate">
+    <by>librarian</by>
+    <fromstate>suspended</fromstate>
+    <tostate>active</tostate>
+  </transition>
+  <transition name="register">
+    <by>librarian</by>
+    <fromstate>unknown</fromstate>
+    <tostate>active</tostate>
+  </transition>
+</statemachine>

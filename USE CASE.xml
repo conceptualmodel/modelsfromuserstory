@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<usecasemodel xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com domain.xsd">
+  <actor name="librarian"/>
+  <actor name="member"/>
+  <usecase name="register member">
+    <actor>librarian</actor>
+  </usecase>
+  <usecase name="borrow book">
+    <actor>member</actor>
+  </usecase>
+  <usecase name="return book">
+    <actor>member</actor>
+  </usecase>
+  <usecase name="reserve book">
+    <actor>member</actor>
+  </usecase>
+  <usecase name="drop book">
+    <actor>member</actor>
+  </usecase>
+  <usecase name="pick book">
+    <actor>member</actor>
+  </usecase>
+  <usecase name="suspend member">
+    <actor>librarian</actor>
+  </usecase>
+  <usecase name="reactivate member">
+    <actor>librarian</actor>
+  </usecase>
+</usecasemodel>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<domain xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.w3schools.com domain.xsd">
+  <entity name="librarian">
+    <type>agent</type>
+  </entity>
+  <entity name="member">
+    <type>agent</type>
+  </entity>
+  <entity name="book">
+    <type>object</type>
+  </entity>
+  <relationship name="register">
+    <agent>librarian</agent>
+    <object>member</object>
+  </relationship>
+  <relationship name="borrow">
+    <agent>member</agent>
+    <object>book</object>
+  </relationship>
+  <relationship name="return">
+    <agent>member</agent>
+    <object>book</object>
+  </relationship>
+  <relationship name="reserve">
+    <agent>member</agent>
+    <object>book</object>
+  </relationship>
+  <relationship name="drop">
+    <agent>member</agent>
+    <object>book</object>
+  </relationship>
+  <relationship name="pick">
+    <agent>member</agent>
+    <object>book</object>
+  </relationship>
+  <relationship name="suspend">
+    <agent>librarian</agent>
+    <object>member</object>
+  </relationship>
+  <relationship name="reactivate">
+    <agent>librarian</agent>
+    <object>member</object>
+  </relationship>
+</domain>
