@@ -1,0 +1,8 @@
+1. As a librarian, I want to register a member so that a new citizen can make use of our services. Given the citizen is eligible, when they present themselves at the counter, then the member is active.
+2. As a member, I want to borrow a book so that I can take it home and read it. Given the the book is available and member is active, when I take the book to the counter, then the book is borrowed.
+3. As a member, I want to return a book so that other citizens can borrow it. Given the book is borrowed, when I return it to the counter, then the book is available.
+4. As a member, I want to reserve a book so that I can borrow a book that is currently not available when I go to the library. Given the member is active and book is borrowed, when I ask to reserve the book, then the book is reserved.
+5. As a member, I want to drop a book so that other citizens can borrow it. Given the book is reserved, when I drop it to the counter, then the book is ready.
+6. As a member, I want to pick a book so that I can take a reserved book home and read it. Given the member is active and book is ready, when I ask for it a the counter, then the book is borrowed.
+7. As a librarian, I want to suspend a member so that this member can no longer borrow books. Given the member is active, when I suspend membership, then the member is suspended.
+8. As a librarian, I want to reactivate a member so that a member can again borrow books. Given the member is suspended, when I reactive membership, then the member is active.
